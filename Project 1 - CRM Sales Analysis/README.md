@@ -8,52 +8,38 @@ This project focuses analysing air traffic across the US from 2000 to 2009. It p
 
 ## 🎯 Objectives 
 
-- Analyse passenger traffic trends over the years
-- Evaluate route and airport popularity
-- Assess seat utilization and efficiency
-- Assess most common flight purposes
-- Gather popularity of regions within the US by analysing total incoming and outgoing passenger traffic
+- Analyse Won deals and win rate over time.
+- Assess top reasons the deals are lost.
+- Check Sales performance across sales representatives and teams
 
 ## 📖 Dataset
 
-The dateset in this project contains information about air travel. The dataset was initially collected from Kraggle and contains over 2 million datapoints. The dataset includes information like flight date, total flights, route, total passengers, empty seats, etc.
+The dateset in this project contains information about sales opportunities. The dataset includes information like lead source, sales representative, deal pipeline, reason for losing the deal,etc.
 
-## 📁 Database
+## 📂 Dataset Structure
 
-To Dataset was directly imported into Power BI. The dataset was cleaned in Power Query by removing redundance columns and empty rows. A new table called routes was created that contained information about airport location and population of the city it was located
+The Dataset contains the following in 1 table
 
-## 📂 Database Structure
-
-The Database contains 1 table
-
-### 1. Airport_Data
-| Column                 | Description                                                    |
-|------------------------|----------------------------------------------------------------|
-| Origin_Airport         | Airport from which the plane departed (IATA 3 character format)|
-| Destination_Airport    | Airport to which the plane landed (IATA 3 Character format)    |
-| Origin_City            | City in which the departure airport is located                 |
-| Destination_City       | City in which arrival airport is located                       |
-| Passengers             | Total passengers who travelled                                 |
-| Seats                  | Total available seats                                          |
-| Flights                | Total number of flights that travelled that route on that date |
-| Distance               | Distance from origin to destination                            |
-| Fly_Date               | Date the flight took place                                     |
-| Origin_population      | Population of the city where the origin airport is located     |
-| Destination_population | Population of the city where the destination airport is located|
-| Org_airport_lat        | Latitude of the origin airport                                 |
-| Org_airport_Long       | Longitude of the origin airport                                |
-| Dest_airport_lat       | Latitude of the origin airport                                 |
-| Dest_airport_long      | Longitude of the origin airport                                |
+### 1. Sales_Data
+| Column         | Description                                                             |
+|----------------|-------------------------------------------------------------------------|
+| Opportunity Id | Unique Id                                                               |
+| Created Date   | Date the Opportunity was found                                          |
+| Sales Rep      | Name of the person who was handling the sales opportunity               |
+| Sales Team     | Team the sales rep was part of                                          |
+| Lead Source    | Where did they get the opportunity from?                                |
+| Deal Amount    | Value of the opportunity                                                |
+| Stage          | Pipeline of the opportunity                                             |
+| Close Date     | Date the opportunity was completed. Blank indicates the deal is ongoing |
+| Loss Reason    | Reason the opportunity was lost                                         |
 
 ## 🔍 Key Business Questions Answered
 
-1. How has total passenger traffic evolved between 2000 and 20009?
-2. Which 5 airports handled the highest passenger traffic?
-3. What are the top 5 most popular flight routes based on total passengers?
-4. What percentage of seats remained empty on flights over the years?
-5. How many empty seats per flight were recorded on average?
-6. What is the distribution of flights by purpose (commercial, cargo, other)?
-7. Which 10 states had the highest passenger traffic (incoming and outgoing)?
+1. What was the total value of opportunities over the past 2 years?
+2. How many of those where closed-won deals, and whats the win rate?
+3. How did the sales rep fair relative to each other?
+4. What were the top reasons for losing the deal?
+5. What is the won deals and win rate change over time?
 
 ## ➡️ Project Approach
 
@@ -73,11 +59,9 @@ Created the following main sections of the dashboard to gather insights
 5. Region wise analysis - Heatmap that indicates top states in the US that have the most passenger traffic (incoming and outgoing)
 
 ## 🏆 Final Insights
-- Boston Logan International Airport (BOS) to (Daniel K. Inouye International Airport (HNL) is the most popular route.
--  Average flight distance is 653.59 nautical miles.
--  There are about 27 unoccupied seats per flight.
--  Over 10 years, there are 2037 flights per route.
--  Passenger traffic had a steep increase till 2007 and then dramatically reduced from 2007-2009. This could be due to the financial crises of 2008
--  Over 95% of flights were commercial.
--  California, texas and florida had the most passenger traffic.
+- Emma was the best sales rep in the last 2 years.
+- Only 33% of the closed deals were won.
+- Price and timing were the main reasons for losing a deal.
+- The win deals exibit approximately a cyclic pattern, with peaks typically happening around the midpoint of each half year.
+- The win rate seem cyclic over time as well, with peak heppening every 4 months. 
 
