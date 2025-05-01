@@ -43,12 +43,13 @@ The Dataset contains the following in 1 table
 
 ## ➡️ Project Approach
 
-### 1. Data Cleaning and Transformation using Power Query in Power BI
-1. Since latitude and longitude columns had many empty rows and Origin/destination city existed, having both latitude/longitude and city information is redundance. So, latitude/longitude columns were removed.
-2. Created a new table Airports with information that were constant like airport name, city and population. Removed the columns in airport_data that existed in airports table
-3. Since city columns contained states too, the city columns were split into city and state. Another column country was added to ensure Power BI knows cities are restricted to the US.
-4. Added a new column routes with format as origin_airport-->destination_airport to analyse popular routes.
-5. Added a new column purpose that indicates the purpose of the flight. Flights with 0 passenger tend to be cargo flights, while flights with at least 1 passenger tend to be commercial.
+### 1. Data Cleaning and Transformation on original data
+1. On inspection, only the date columns were not in the correct data type. The date columns had time, which was unnecessary. Hence, changed the created date and closed date columns to short date data type. Rest of the data was clean.
+2. Transformed the data by adding the following columns -
+   a. Open/Closed - Indicates if the deal is opened or closed
+   b. Time to close - Difference beteeen closed and open date, if closed date is not empty
+   
+   
 
 ### 1. Data Visualatization Using Power BI
 Created the following main sections of the dashboard to gather insights
