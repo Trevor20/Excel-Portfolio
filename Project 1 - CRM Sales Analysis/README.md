@@ -4,7 +4,7 @@
 
 This project focuses analysing air traffic across the US from 2000 to 2009. It presents key insights into passenger traffic, flight occupancy, route popularity and state-wise aire travel distribution. It helps stakeholders understand travel demand, airport performance, and flight patterns over the years.
 
-## [Report](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project2-AirportAnalysis/report)
+## [Report]([https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project2-AirportAnalysis/report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%201%20-%20CRM%20Sales%20Analysis/Sales%20Dashboard%20Screenshot.png))
 
 ## 🎯 Objectives 
 
