@@ -46,12 +46,25 @@ The Dataset contains the following in 1 table
 ### 1. Data Cleaning and Transformation on original data
 1. On inspection, only the date columns were not in the correct data type. The date columns had time, which was unnecessary. Hence, changed the created date and closed date columns to short date data type. Rest of the data was clean.
 2. Transformed the data by adding the following columns -
-   a. Open/Closed - Indicates if the deal is opened or closed
-   b. Time to close - Difference beteeen closed and open date, if closed date is not empty
-   
-   
+   - Open/Closed - Indicates if the deal is opened or closed
+   - Time to close - Difference beteeen closed and open date, if closed date is not empty
+   - EoM Created - End of month (EoM) date of date the opportunity was found. Created since usually performance is evaluated EoM (CHECK LATER)
+   - Date Inc - To ensure EoM is included in the dates the user wants to see (CHECK LATER)
+   - Team Inc - TRUE/FALSE based on whether the user wants to check for the specific team
+   - Rep Inc - TRUE/FALSE based on whether the user wants to check for the specific sales representative
+   - Stage Inc - TRUE/FALSE based on whether the user wants to check for the specific stage of the pipeline
+   - Source Inc - TRUE/FALSE based on whether the user wants to check for the specific Source
+   - Master Inc - Multiplies all values in the prio created Inc Columns. Used this column to ensure only data that the user wants is choosen
 
-### 1. Data Visualatization Using Power BI
+### 2. Creation of Helper Worksheets 
+The following worksheets were created for efficient selection of data based on user preferences
+1. Dashboard Metrics - The main KPIs were created and formated on this page. The KPIs were transported to the main dashboard using the camera tool.
+2. Index - To ensure efficient Xlookup by referencing Index instead of big values
+3. Rank Rollup - Tables needed to make dashboard graphs were created in this worksheet
+4. Data Rollup - Data needed by the user was transfered to this worksheet using the FILTER function and Master Inc Column
+
+
+### 3. Data Visualatization on the Dashboard Worksheet
 Created the following main sections of the dashboard to gather insights
 1. Overview - Summary of relevant KPIs like total passengers, longest route, % unoccupied seats per flight, flight distance per route, etc
 2. Time-series analysis - tracks how passenger traffic evolved over the years
