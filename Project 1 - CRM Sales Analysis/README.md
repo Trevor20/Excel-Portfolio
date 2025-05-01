@@ -44,7 +44,7 @@ The Dataset contains the following in 1 table
 ## ➡️ Project Approach
 
 ### 1. Data Cleaning and Transformation on original data
-1. On inspection, only the date columns were not in the correct data type. The date columns had time, which was unnecessary. Hence, changed the created date and closed date columns to short date data type. Rest of the data was clean.
+1. On inspection, only the date columns were not in the correct data type. The date columns had time, which was unnecessary. Hence, changed the created date and closed date columns to short date data type. Rest of the data was clean. Converted the data into a excel table to ensure the dashboard updates with the addition/update of data.
 2. Transformed the data by adding the following columns -
    - Open/Closed - Indicates if the deal is opened or closed
    - Time to close - Difference beteeen closed and open date, if closed date is not empty
