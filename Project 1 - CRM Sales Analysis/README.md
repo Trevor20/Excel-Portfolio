@@ -48,8 +48,8 @@ The Dataset contains the following in 1 table
 2. Transformed the data by adding the following columns -
    - Open/Closed - Indicates if the deal is opened or closed
    - Time to close - Difference beteeen closed and open date, if closed date is not empty
-   - EoM Created - End of month (EoM) date of date the opportunity was found. Created since usually performance is evaluated EoM (CHECK LATER)
-   - Date Inc - To ensure EoM is included in the dates the user wants to see (CHECK LATER)
+   - EoM Created - End of month (EoM) date of date the opportunity was found.
+   - Date Inc - TRUE/FALSE indicating whether the specified date falls within the dates the user indicated
    - Team Inc - TRUE/FALSE based on whether the user wants to check for the specific team
    - Rep Inc - TRUE/FALSE based on whether the user wants to check for the specific sales representative
    - Stage Inc - TRUE/FALSE based on whether the user wants to check for the specific stage of the pipeline
@@ -66,16 +66,15 @@ The following worksheets were created for efficient selection of data based on u
 
 ### 3. Data Visualatization on the Dashboard Worksheet
 Created the following main sections of the dashboard to gather insights
-1. Overview - Summary of relevant KPIs like total passengers, longest route, % unoccupied seats per flight, flight distance per route, etc
-2. Time-series analysis - tracks how passenger traffic evolved over the years
-3. Airport popularity - graphs that highlight the busiest airports an popular flight routes
-4. Market trends - Donut chart that indicates the most common purpose of travel
-5. Region wise analysis - Heatmap that indicates top states in the US that have the most passenger traffic (incoming and outgoing)
+1. Overview - Summary of relevant KPIs like total win bookings, total won deals, average time to close and pipeline value
+2. Time-series analysis - tracks how win bookings and win rate changes with time
+3. Top loss reasons - graph that indicate the main reasons the deals were lost
+4. Sales Rep performance tracking - indicates how sales representatives are performing in the time period
 
 ## 🏆 Final Insights
 - Emma was the best sales rep in the last 2 years.
 - Only 33% of the closed deals were won.
 - Price and timing were the main reasons for losing a deal.
 - The win deals exibit approximately a cyclic pattern, with peaks typically happening around the midpoint of each half year.
-- The win rate seem cyclic over time as well, with peak heppening every 4 months. 
+- The win rate seem cyclic over time as well, with peaks happening every 4 months. 
 
