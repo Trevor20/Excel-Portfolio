@@ -2,19 +2,29 @@
 
 ## 🚀 Project Overview
 
-This project focuses analysing air traffic across the US from 2000 to 2009. It presents key insights into passenger traffic, flight occupancy, route popularity and state-wise aire travel distribution. It helps stakeholders understand travel demand, airport performance, and flight patterns over the years.
+This project analyzes CRM sales opportunity data to help stakeholders understand sales performance and deal outcomes. It focuses on tracking performance of sales representatives, win rates over time, and uncovering key reasons for deal losses. The goal is to generate actionable insights that improve sales strategies and team effectiveness.
+
+📊 Built using advanced Excel techniques including dynamic filtering, helper sheets, calculated fields, and camera tool integration for an interactive dashboard experience. 
 
 ## [Report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%201%20-%20CRM%20Sales%20Analysis/Sales%20Dashboard%20Screenshot.png)
 
 ## 🎯 Objectives 
 
-- Analyse Won deals and win rate over time.
-- Assess top reasons the deals are lost.
-- Check Sales performance across sales representatives and teams
+- Track won deals and win rate over time.
+- Assess top reasons for deal losses.
+- Assess performance across sales representatives and teams
 
 ## 📖 Dataset
 
-The dateset in this project contains information about sales opportunities. The dataset includes information like lead source, sales representative, deal pipeline, reason for losing the deal,etc.
+The dataset includes information on individual sales opportunities like lead source, sales representative/team, deal pipeline, loss reasons, etc.
+
+## 🧰 Tools Used
+
+- Microsoft Excel - For data cleaning, transformation, and interactive dashboard design.
+- Excel Tables - To structure data and enable automatic expansion with new entries.
+- Excel Functions - XLOOPUP, FILTER, SORT, IF, EOMONTH, SEQUENCE and logical operations.
+- Named Ranges & Helper Sheets - To support dynamic filtering.
+- Camera Tool - For embedding KPI visuals into the main dashboard.
 
 ## 📂 Dataset Structure
 
@@ -23,58 +33,59 @@ The Dataset contains the following in 1 table
 ### 1. Sales_Data
 | Column         | Description                                                             |
 |----------------|-------------------------------------------------------------------------|
-| Opportunity Id | Unique Id                                                               |
+| Opportunity Id | Unique Id for each sales deal                                           |
 | Created Date   | Date the Opportunity was found                                          |
-| Sales Rep      | Name of the person who was handling the sales opportunity               |
+| Sales Rep      | Sales representative assigned to the deal                               |
 | Sales Team     | Team the sales rep was part of                                          |
-| Lead Source    | Where did they get the opportunity from?                                |
+| Lead Source    | Origin of the sales opportunity                                         |
 | Deal Amount    | Value of the opportunity                                                |
 | Stage          | Pipeline of the opportunity                                             |
 | Close Date     | Date the opportunity was completed. Blank indicates the deal is ongoing |
-| Loss Reason    | Reason the opportunity was lost                                         |
+| Loss Reason    | Reason the opportunity was lost (if applicable                          |
 
 ## 🔍 Key Business Questions Answered
 
-1. What was the total value of opportunities over the past 2 years?
-2. How many of those where closed-won deals, and whats the win rate?
-3. How did the sales rep fair relative to each other?
-4. What were the top reasons for losing the deal?
-5. What is the won deals and win rate change over time?
+1. What is the total value of sales opportunities over the past 2 years?
+2. What proportion of deals were successfully closed (win rate)?
+3. How did the sales rep perform relative to each other?
+4. What are the most common reasons for losing deals?
+5. How do won deals and win rates trend over time?
 
 ## ➡️ Project Approach
 
 ### 1. Data Cleaning and Transformation on original data
-1. On inspection, only the date columns were not in the correct data type. The date columns had time, which was unnecessary. Hence, changed the created date and closed date columns to short date data type. Rest of the data was clean. Converted the data into a excel table to ensure the dashboard updates with the addition/update of data.
-2. Transformed the data by adding the following columns -
+1. Converted Created Date and Close Date to short date format(removed time). Rest of the data was clean.
+2. Converted data into Excel Table to ensure dashboard updates with changes in data. 
+3. Transformed the data by adding the following columns -
    - Open/Closed - Indicates if the deal is opened or closed
-   - Time to close - Difference beteeen closed and open date, if closed date is not empty
+   - Time to close - Difference between closed and open date, if closed date is not empty
    - EoM Created - End of month (EoM) date of date the opportunity was found.
    - Date Inc - TRUE/FALSE indicating whether the specified date falls within the dates the user indicated
    - Team Inc - TRUE/FALSE based on whether the user wants to check for the specific team
    - Rep Inc - TRUE/FALSE based on whether the user wants to check for the specific sales representative
    - Stage Inc - TRUE/FALSE based on whether the user wants to check for the specific stage of the pipeline
    - Source Inc - TRUE/FALSE based on whether the user wants to check for the specific Source
-   - Master Inc - Multiplies all values in the prio created Inc Columns. Used this column to ensure only data that the user wants is choosen
+   - Master Inc - Multiplies all values in the prior created Inc Columns. Used this column to ensure only data that the user wants is chosen
 
 ### 2. Creation of Helper Worksheets 
 The following worksheets were created for efficient selection of data based on user preferences
-1. Dashboard Metrics - The main KPIs were created and formated on this page. The KPIs were transported to the main dashboard using the camera tool.
-2. Index - To ensure efficient Xlookup by referencing Index instead of big values
+1. Dashboard Metrics - The main KPIs were created and formatted on this page. The KPIs were transported to the main dashboard using the camera tool.
+2. Index - Lookup helper to simplify formulas using XLOOKUP.
 3. Rank Rollup - Tables needed to make dashboard graphs were created in this worksheet
-4. Data Rollup - Data needed by the user was transfered to this worksheet using the FILTER function and Master Inc Column
+4. Data Rollup - Dynamic dataset filtering using the FILTER() + Master Inc logic
 
 
-### 3. Data Visualatization on the Dashboard Worksheet
+### 3. Data Visualization on the Dashboard Worksheet
 Created the following main sections of the dashboard to gather insights
 1. Overview - Summary of relevant KPIs like total win bookings, total won deals, average time to close and pipeline value
 2. Time-series analysis - tracks how win bookings and win rate changes with time
-3. Top loss reasons - graph that indicate the main reasons the deals were lost
-4. Sales Rep performance tracking - indicates how sales representatives are performing in the time period
+3. Top loss reasons - graph that indicate the main reasons for losing deals
+4. Sales Rep performance tracking - indicates how each sales representative is performing over time
 
 ## 🏆 Final Insights
-- Emma was the best sales rep in the last 2 years.
-- Only 33% of the closed deals were won.
-- Price and timing were the main reasons for losing a deal.
-- The win deals exibit approximately a cyclic pattern, with peaks typically happening around the midpoint of each half year.
-- The win rate seem cyclic over time as well, with peaks happening every 4 months. 
+- 👜 Emma was the top-performing sales representative over the past 2 years.
+- 🧮 Only 33% of the closed deals were won, highlighting room for conversion improvement.
+- ❌ The top loss reasons were Pricing and Bad Timing.
+- 📉 Win deals exhibit a cyclic pattern, with peaks typically happening around mid-year and dropping toward year-end
+- 📆 Win rate exhibited 4-month cycles, suggesting a seasonal or campaign-driven effect. 
 
