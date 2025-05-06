@@ -4,7 +4,7 @@
 
 This project analyses workplace absenteeism using employee demographics, lifestyle choices and compensation data. Furthermore, the HR department is looking to promote a healthy workforce through incentive programs like a bonus. Specifically, they aim to identify healthy employees with low absenteeism for a health bonus and evaluate compensation adjustments for non-smokers.
 
-Data was cleaned and analysed using SQL, and key trends and insights was visualized and presented in Power BI through interactive dashboards.
+Data was extracted and loaded using Excel Power Query Editor. Data cleaning and modelling was done using Excel Functions. Key trends and insights was visualized and presented in Excel through dashboards.
 
 ## [Report](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project1-HRAbsenteesim/report)
 
@@ -17,7 +17,7 @@ Employee absenteeism directly affects productivity and efficiency. The HR depart
 1. HR wants the following information for their incentive programs
    - Provide a list of healthy individuals and low absenteeism for a health bonus program.
    - Calculate wage increase for non-smokers - budget $983,221
-2. Develop a Power BI dashboard to help HR understand key absenteeism patterns accross time, demographics and lifestyle
+2. Develop an Excel dashboard to help HR understand key absenteeism patterns accross time, demographics and lifestyle
    - Absenteeism Overview - Key trends, Absenteeism Distribution and top reasons for being absent 
    - Absenteeism Factors - Analysis of how compensation, disciplinary failure and social lifestyle (Smoker, Drinker, BMI and no of degrees, pets and children) impact absenteeism.
 
@@ -31,11 +31,12 @@ The dataset includes information on:
 
 The data is anonymized and provided in CSV format. The dataset has 740 records.
 
-## 🧰 Tools Used
-- MySQL - For data cleaning, joins and transformations using SQL queries and views
-- Power BI - For interactive dashboard creation and data visualization
-- DAX - For calculated measures, KPIs and time-based metrics
-- Data Modelling - Star schema and relationship setup between data tables
+## 🧰 Tools Used - CHECK LATER
+- Microsoft Excel - For data cleaning, transformation, and dashboard design.
+- Excel Tables - To structure data and enable automatic expansion with new entries.
+- Excel Functions - XLOOPUP, FILTER, SORT, IF.
+- Helper Sheets - To support dynamic filtering.
+- Camera Tool - For embedding KPI visuals into the main dashboard.
 
 ## 📁 Database
 
