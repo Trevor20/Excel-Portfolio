@@ -31,20 +31,18 @@ The dataset includes information on:
 
 The data is anonymized and provided in CSV format. The dataset has 740 records.
 
-## 🧰 Tools Used - CHECK LATER
-- Microsoft Excel - For data cleaning, transformation, and dashboard design.
+## 🧰 Tools Used
+- Microsoft Excel - For data transformation, and dashboard design.
+- Excel Power Query Editor - To merge multiple tables and data cleaning 
 - Excel Tables - To structure data and enable automatic expansion with new entries.
-- Excel Functions - XLOOPUP, FILTER, SORT, IF.
+- Pivot Table - To group and summarize data.
+- Excel Functions - VLOOPUP, FILTER, SORT, TEXT, UNIQUE.
 - Helper Sheets - To support dynamic filtering.
 - Camera Tool - For embedding KPI visuals into the main dashboard.
 
-## 📁 Database
+## 📂 Dataset Structure
 
-The database was created in MySQL and the dataset was imported. The questions from HR was answered using SQL queries. A View was created in MySQL with relevant data required for absenteeism analysis. The view was connected to Power BI and an interactive dashboard was created.
-
-## 📂 Database Structure
-
-Three tables were created in MySQL
+The following three CSV tables were connected and imported into Excel
 
 ### 1. Compensation
 | Column  | Description                    |
@@ -98,13 +96,14 @@ Three tables were created in MySQL
 
 ## ➡️ Project Approach
 
-### 1. Data preparation in MySQL
-1. Data from CSV files was loaded into MySQL using Table Data Import Wizard.
-2. Questions from HR was answered using SELECT and JOIN.
-3. A VIEW was created with relevant data for dashboarding.
-4. Connected Power BI to MySQL using Direct Query to create interactive dashboards.
+### 1. Data preparation in Excel Power Query Editor
+1. Data from CSV files was imported into Excel.
+2. The 3 tables was merged into one table.
+3. Ambiguous columns were removed and loaded into Excel.
 
-### 2. Dashboard Development in Power BI
+### 2. 
+
+### 3. Dashboard Development in Excel
 The dashboard has the following main Attributes
 1. Page 1 - Absenteeism Overview
       - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
