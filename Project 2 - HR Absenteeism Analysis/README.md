@@ -1,4 +1,4 @@
-# Analysing Employee Absenteeism using Excel - In Progress
+# Analysing Employee Absenteeism using Excel 
 
 ## 🚀 Project Overview
 
@@ -96,12 +96,19 @@ The following three CSV tables were connected and imported into Excel
 
 ## ➡️ Project Approach
 
-### 1. Data preparation in Excel Power Query Editor
+### 1. Data Cleaning and Transformation using Excel Power Query Editor and Excel Functions
 1. Data from CSV files was imported into Excel.
 2. The 3 tables was merged into one table.
 3. Ambiguous columns were removed and loaded into Excel.
+4. Created BMI Category and Season columns using Index + VLOOKUP.
 
-### 2. 
+### 2. Creation of Helper Worksheets
+
+The following worksheets were created for efficient selection of data based on user preferences
+
+- Dashboard Metrics - The main KPIs were created and formatted on this page. The KPIs were transported to the main dashboard using the camera tool.
+- Index - Lookup helper to simplify formulas using VLOOKUP.
+- Calculation Engine - Tables needed to make dashboard graphs were created in this worksheet.
 
 ### 3. Dashboard Development in Excel
 The dashboard has the following main Attributes
