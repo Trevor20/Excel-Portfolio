@@ -1,4 +1,4 @@
-# Analysing Employee Absenteeism using SQL and Power BI
+# Analysing Employee Absenteeism using Excel - In Progress
 
 ## 🚀 Project Overview
 
