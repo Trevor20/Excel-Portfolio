@@ -6,6 +6,12 @@ This project analyses workplace absenteeism using employee demographics, lifesty
 
 Data was extracted and loaded using Excel Power Query Editor. Data cleaning and modelling was done using Excel Functions. Key trends and insights was visualized through a two-page Excel dashboard.
 
+> 🛠️ **Also Recreated in SQL and Power BI**
+> 
+> This project was originally built in **SQL and Power BI** to demonstrate my ability to work across different data tools.
+> 
+> ➡️ [View SQL + Power BI Version](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project1-HRAbsenteesim)
+
 ## [Report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%202%20-%20HR%20Absenteeism%20Analysis/Absenteeism_Dashboard_Overview.png)
 
 ## 🧠 Business Problem
