@@ -111,15 +111,15 @@ The following worksheets were created for efficient selection of data based on u
 ### 3. Dashboard Development in Excel
 The dashboard has the following main Attributes
 1. Page 1 - Absenteeism Overview
-- KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
-- Time-series analysis - tracks when employees take leaves
-- Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
-- Top reasons - table that indicates primary absent causes
+   - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
+   - Time-series analysis - tracks when employees take leaves
+   - Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
+   - Top reasons - table that indicates primary absent causes
   
 2. Page 2 - Absenteeism Factors
-- Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
-- Social factors - Provide insights into what social factors affect absenteeism
-- Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
+   - Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
+   - Social factors - Provide insights into what social factors affect absenteeism
+   - Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
 
 ## 🏆 Final Insights
 - 📈 Non-Smokers are eligible for a wage increase of approx $1433.
