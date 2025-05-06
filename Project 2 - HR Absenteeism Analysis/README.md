@@ -4,7 +4,7 @@
 
 This project analyses workplace absenteeism using employee demographics, lifestyle choices and compensation data. Furthermore, the HR department is looking to promote a healthy workforce through incentive programs like a bonus. Specifically, they aim to identify healthy employees with low absenteeism for a health bonus and evaluate compensation adjustments for non-smokers.
 
-Data was extracted and loaded using Excel Power Query Editor. Data cleaning and modelling was done using Excel Functions. Key trends and insights was visualized and presented in Excel through dashboards.
+Data was extracted and loaded using Excel Power Query Editor. Data cleaning and modelling was done using Excel Functions. Key trends and insights was visualized through a two-page Excel dashboard.
 
 ## [Report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%202%20-%20HR%20Absenteeism%20Analysis/Absenteeism_Dashboard_Overview.png)
 
@@ -33,8 +33,7 @@ The data is anonymized and provided in CSV format. The dataset has 740 records.
 
 ## 🧰 Tools Used
 - Microsoft Excel - For data transformation, and dashboard design.
-- Excel Power Query Editor - To merge multiple tables and data cleaning 
-- Excel Tables - To structure data and enable automatic expansion with new entries.
+- Power Query Editor - To merge data and data cleaning 
 - Pivot Table - To group and summarize data.
 - Excel Functions - VLOOPUP, FILTER, SORT, TEXT, UNIQUE.
 - Helper Sheets - To support dynamic filtering.
@@ -97,10 +96,9 @@ The following three CSV tables were connected and imported into Excel
 ## ➡️ Project Approach
 
 ### 1. Data Cleaning and Transformation using Excel Power Query Editor and Excel Functions
-1. Data from CSV files was imported into Excel.
-2. The 3 tables was merged into one table.
-3. Ambiguous columns were removed and loaded into Excel.
-4. Created BMI Category and Season columns using Index + VLOOKUP.
+1. Imported and merged three CSV tables into a clean dataset.
+2. Removed ambiguous and low-value columns.
+3. Created BMI Category and Season columns using Index + VLOOKUP.
 
 ### 2. Creation of Helper Worksheets
 
@@ -113,14 +111,15 @@ The following worksheets were created for efficient selection of data based on u
 ### 3. Dashboard Development in Excel
 The dashboard has the following main Attributes
 1. Page 1 - Absenteeism Overview
-      - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
-      - Time-series analysis - tracks when employees take leaves
-      - Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
-      - Top reasons - table that indicates primary absent causes
-3. Page 2 - Absenteeism Factors
-     - Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
-     - Social factors - Provide insights into what social factors affect absenteeism
-     - Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
+- KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
+- Time-series analysis - tracks when employees take leaves
+- Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
+- Top reasons - table that indicates primary absent causes
+  
+2. Page 2 - Absenteeism Factors
+- Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
+- Social factors - Provide insights into what social factors affect absenteeism
+- Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
 
 ## 🏆 Final Insights
 - 📈 Non-Smokers are eligible for a wage increase of approx $1433.
