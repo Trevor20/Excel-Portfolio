@@ -8,7 +8,7 @@ Data was extracted and loaded using Excel Power Query Editor. Data cleaning and 
 
 > 🛠️ **Also Recreated in SQL and Power BI**
 > 
-> This project was originally built in **SQL and Power BI** to demonstrate my ability to work across different data tools.
+> This project was originally built in **SQL and Power BI**. I built it in Excel to demonstrate my ability to work across different data tools.
 > 
 > ➡️ [View SQL + Power BI Version](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project1-HRAbsenteesim)
 
