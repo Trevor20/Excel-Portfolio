@@ -29,8 +29,8 @@ The organization wants to understand:
 The dataset includes information on:
 - Demographics - Age, gender, education, distance from office, designation
 - Performance - For Employee and for employer 
-- Company characteristics - Monthly & overtime compensation, years stayed with manager
-- Attrition: Who stayed, who left and when they left
+- Company characteristics - Monthly compensation, years stayed with manager, department
+- Attrition: Who stayed and who left
 
 ...and more
 
@@ -48,43 +48,41 @@ The data is provided in CSV format. The dataset has 1740 records.
 
 ## 📂 Dataset Structure - In Progress
 
-The following CSV tables were connected and imported into Excel
+A CSV table was connected and imported into Excel. It includes, among other fields, the following primary columns:
 
 ### 3. HR_Analytics
-| Column                          | Description                                   |
-|---------------------------------|-----------------------------------------------|
-| Id                              | Unique Employee Id                            |
-| Reason for absence              | Reason Id                                     |
-| Month of Absence                | Month the employee was absent                 |
-| Day of the week                 | Day the employee was absent                   |
-| Seasons                         | Source had no info, data is ambiguous         |
-| Transportation expense          | Cost to travel from home to office            |
-| Distance From residence to work | Distance to work                              |
-| Service time                    | Source had no info, data is ambiguous         |
-| Age                             | Age of employee                               |
-| Work load average/day           | Source had no info, data is ambiguous         |
-| Hit target                      | Source had no info, data is ambiguous         |
-| Disciplinary failure            | Whether employee had performance issues (0/1) |
-| Education                       | No of education degrees                       |
-| Son                             | No of Children                                |
-| Social Drinker                  | Whether the employee drinks (1/0)             |
-| Social Smoker                   | Whether the employee smokes (1/0)             |
-| Pet                             | No of pets                                    |
-| Weight                          | Employee weight                               |
-| Height                          | Employee height                               |
-| Body mass index                 | Division of weight by height. Also called BMI |
-| Absenteeism time in hours       | Total hours the employee was absent           |
+| Column                    | Description                                    |
+|---------------------------|------------------------------------------------|
+| EmpID                     | Unique Employee Id                             |
+| Age                       | Employee age                                   |
+| AgeGroup                  | Age group of the employee                      |
+| Attrition                 | Whether the employee left (Yes/No)             |
+| BusinessTravel            | Amount of travel needed for the job            |
+| DailyRate(AED)            | Daily compensation for the employee            |
+| Department                | Department the employee works in               |
+| DistanceFromHome(KM)      | Distance from office to home                   |
+| Education                 | Level of education of the employee             |
+| EducationField            | Education field                                |
+| EnvironmentSatisfaction   | Employee satisfaction of the work environment  |
+| Gender                    | Employee Gender                                |
+| JobInvolvement            | Level of involvment to the job                 |
+| JobRole                   | Job Title                                      |
+| JobSatisfaction           | How satisfied is the employee with the job     |
+| MaritalStatus             | Marital status                                 |
+| MonthlyIncome(AED)        | Monthly compensation                           |
+| SalarySlab                | Salary slab of the employee                    |
+| PerformanceRating         | Employees performance rating                   |
+| RelationshipSatisfaction  | How satisfied is the employee with the manager |
+| WorkLifeBalance           | Level of work life balance of the employee     |
 
-## 🔍 Key Business Questions Answered - In Progress
+## 🔍 Key Business Questions Answered
 
-1. Who are the healthy individuals with low absenteeism eligible for a health bonus program?
-2. Calculate wage increase for non-smokers. Budget is $983,221.
-3. How does absenteeism vary accross weekdays and months?
-4. What are the top reasons employees take leave?
-5. Is there a correlatiion between age or compensation and absent hours?
-6. Does lifestyle(Smoking, drinking, education, children, pets) influence absenteeism?
-7. Does having a disciplinary failure impact hours absent?
-8. Does BMI impact absenteeism?
+1. What is the overall attrition rate, and the median tenure of people who left?
+2. Which job level and department contains the highest attrition?
+3. How does attrition vary across different tenures?
+4. How does satisfaction levels differ among those who staysed vs those who left?
+5. Does attrition depend on salary slabs and years of experience of the employee?
+6. Does attrition differ as distance from office increases?
 
 ## ➡️ Project Approach
 
@@ -97,8 +95,8 @@ The following CSV tables were connected and imported into Excel
    - Increase modeling complexity
    - Improve clarity and analytical flexibility
 2. Several columns (e.g., Education, Work-Life Balance, Performance Rating) were encoded as numeric values (1–5) without definitions. Created **dimension tables** to map these numeric codes to meaningful labels  
-3. For **Performance Rating**, multiple rating columns existed:
-   - Created one shared Performance dimension
+3. For **Satisfaction Rating**, multiple rating columns existed:
+   - Created one shared Satisfaction dimension
    - Connected it to all three rating columns (1 active relationship + 2 inactive)
 4. Loaded the cleaned tables into Power Pivot and built a **star schema**
 
