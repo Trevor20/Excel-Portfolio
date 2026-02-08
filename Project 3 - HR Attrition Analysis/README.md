@@ -11,8 +11,8 @@ The dashboard was built entirely in **Microsoft Excel** using **Power Query**, *
 ## 🧠 Business Problem
 
 Employee attrition is costly and time consuming, especially when it disproportionately affects specific roles, experience levels, or departments.  
-The organization wants to understand:
 
+The organization wants to understand:
 - Which employee segments are most likely to leave
 - Whether tenure, satisfaction, compensation, or commute distance influence attrition
 - Where targeted retention strategies would have the highest impact
