@@ -29,7 +29,7 @@ The organization wants to understand:
 The dataset includes information on:
 - Demographics - Age, gender, education, distance from office, designation
 - Performance - For Employee and for employer 
-- Company characteristics - Monthly % overtime compensation, years stayed with manager
+- Company characteristics - Monthly & overtime compensation, years stayed with manager
 - Attrition: Who stayed, who left and when they left
 ...and more
 
@@ -93,12 +93,12 @@ The following CSV tables were connected and imported into Excel
 
 ### 2. Data Modelling & Transformation in Power Query
 1. Started with a single fact table and intentionally **split it into 6 tables** to:
-  - Increase modeling complexity
-  - Improve clarity and analytical flexibility
+   - Increase modeling complexity
+   - Improve clarity and analytical flexibility
 2. Several columns (e.g., Education, Work-Life Balance, Performance Rating) were encoded as numeric values (1–5) without definitions. Created **dimension tables** to map these numeric codes to meaningful labels  
 3. For **Performance Rating**, multiple rating columns existed:
-  - Created one shared Performance dimension
-  - Connected it to all three rating columns (1 active relationship + 2 inactive)
+   - Created one shared Performance dimension
+   - Connected it to all three rating columns (1 active relationship + 2 inactive)
 4. Loaded the cleaned tables into Power Pivot and built a **star schema**
 
 ### 3. Measures & Calculations in Power Pivot using DAX
