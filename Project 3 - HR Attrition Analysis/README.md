@@ -6,7 +6,7 @@ This project analyzes employee attrition patterns using an HR dataset, with the 
 
 The dashboard was built entirely in **Microsoft Excel** using **Power Query**, **Power Pivot**, **Pivot Tables**, and **DAX**, following a dimensional modeling approach (star schema).  
 
-## [Report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%202%20-%20HR%20Absenteeism%20Analysis/Absenteeism_Dashboard_Overview.png)
+## [Report](https://github.com/Trevor20/Excel-Portfolio/blob/main/Project%203%20-%20HR%20Attrition%20Analysis/Attrition_Analysis.png)
 
 ## 🧠 Business Problem
 
