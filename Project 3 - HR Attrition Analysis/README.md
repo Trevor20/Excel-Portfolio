@@ -1,4 +1,4 @@
-# In Progress - Analysing Employee Attrition using Excel 
+# Analysing Employee Attrition using Excel 
 
 ## 🚀 Project Overview
 
@@ -30,7 +30,7 @@ The dataset includes information on:
 - Demographics - Age, gender, education, distance from office, designation
 - Performance - For Employee and for employer 
 - Company characteristics - Monthly compensation, years stayed with manager, department
-- Attrition: Who stayed and who left
+- Attrition - Who stayed and who left
 
 ...and more
 
