@@ -31,6 +31,7 @@ The dataset includes information on:
 - Performance - For Employee and for employer 
 - Company characteristics - Monthly & overtime compensation, years stayed with manager
 - Attrition: Who stayed, who left and when they left
+
 ...and more
 
 The data is provided in CSV format. The dataset has 1740 records.
