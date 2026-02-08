@@ -46,7 +46,7 @@ The data is provided in CSV format. The dataset has 1740 records.
 - **Data Source**
   - Public HR Attrition dataset from Kaggle
 
-## 📂 Dataset Structure - In Progress
+## 📂 Dataset Structure
 
 A CSV table was connected and imported into Excel. It includes, among other fields, the following primary columns:
 
