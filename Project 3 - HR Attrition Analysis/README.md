@@ -103,19 +103,19 @@ The following CSV tables were connected and imported into Excel
 
 ### 3. Measures & Calculations in Power Pivot using DAX
 1. Created basic DAX measures such as:
-  - Overall attrition rate
-  - Attrition by department
-  - Maximum attrition across job levels
+   - Overall attrition rate
+   - Attrition by department
+   - Maximum attrition across job levels
 2. Focused on clarity and correctness rather than overly complex DAX
 
 ### 4. Dashboard Development in Excel
 1. Built **Pivot Tables** from the data model
 2. Created charts directly from Pivot Tables to ensure dynamic filtering
 3. Used Excel’s **Camera Tool** to design KPI cards for:
-  - Total employees
-  - Attrition %
-  - Median tenure of employees who left
-  - Highest-attrition department and job level
+   - Total employees
+   - Attrition %
+   - Median tenure of employees who left
+   - Highest-attrition department and job level
 
 ## 🏆 Final Insights
 
