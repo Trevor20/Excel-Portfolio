@@ -10,54 +10,46 @@ The dashboard was built entirely in **Microsoft Excel** using **Power Query**, *
 
 ## 🧠 Business Problem
 
-Employee absenteeism directly affects productivity and efficiency. The HR department wants to understand the major reasons of absenteeism and identify areas where intervention - through wellness programs and compensation changes - can reduce unplanned leave and encourage healthier employee behaviour.
+Employee attrition is costly and time consuming, especially when it disproportionately affects specific roles, experience levels, or departments.  
+The organization wants to understand:
+
+- Which employee segments are most likely to leave
+- Whether tenure, satisfaction, compensation, or commute distance influence attrition
+- Where targeted retention strategies would have the highest impact
 
 ## 🎯 Objectives 
 
-1. HR wants the following information for their incentive programs
-   - Provide a list of healthy individuals and low absenteeism for a health bonus program.
-   - Calculate wage increase for non-smokers - budget $983,221
-2. Develop an Excel dashboard to help HR understand key absenteeism patterns accross time, demographics and lifestyle
-   - Absenteeism Overview - Key trends, Absenteeism Distribution and top reasons for being absent 
-   - Absenteeism Factors - Analysis of how compensation, disciplinary failure and social lifestyle (Smoker, Drinker, BMI and no of degrees, pets and children) impact absenteeism.
+1. Analyze overall attrition rate and key employee segments driving turnover
+2. Identify patterns across tenure, department, job level, salary slabs, and distance from office
+3. Compare satisfaction levels of employees who stayed vs those who left
+4. Build a clear, decision-ready dashboard for HR and leadership stakeholders
 
 ## 📖 Dataset
 
 The dataset includes information on:
-- Demographics: Age, education, BMI, children, pets
-- Compensation: Compensation per hour
-- Lifestyle: Smoking, drinking habits
-- Absenteeism: Reasons, number of hours, days of the week, and months
+- Demographics - Age, gender, education, distance from office, designation
+- Performance - For Employee and for employer 
+- Company characteristics - Monthly % overtime compensation, years stayed with manager
+- Attrition: Who stayed, who left and when they left
+...and more
 
-The data is anonymized and provided in CSV format. The dataset has 740 records.
+The data is provided in CSV format. The dataset has 1740 records.
 
 ## 🧰 Tools Used
-- Microsoft Excel - For data transformation, and dashboard design.
-- Power Query Editor - To merge data and data cleaning 
-- Pivot Table - To group and summarize data.
-- Excel Functions - VLOOPUP, FILTER, SORT, TEXT, UNIQUE.
-- Helper Sheets - To support dynamic filtering.
-- Camera Tool - For embedding KPI visuals into the main dashboard.
+- **Microsoft Excel**
+  - Power Query - For ETL & data transformations
+  - Power Pivot - For creating data model & star schema
+  - Pivot Tables & Pivot Charts - For creating the dashboard graphs
+  - DAX - For basic measures & KPIs
+  - Camera Tool - For KPI cards
+- **Data Source**
+  - Public HR Attrition dataset from Kaggle
 
-## 📂 Dataset Structure
+## 📂 Dataset Structure - In Progress
 
-The following three CSV tables were connected and imported into Excel
+The following CSV tables were connected and imported into Excel
 
-### 1. Compensation
-| Column  | Description                    |
-|---------|--------------------------------|
-| Id      | Unique employee Id             |
-| Comp/hr | Compensation per hour ($/hour) |
-
-
-### 2. Absent_Data
-| Column | Description             |
-|--------|-------------------------|
-| Number | Unique Reason Id        |
-| Reason | Reason for being absent |
-
-
-### 3. Absent_Data
+### 3. HR_Analytics
 | Column                          | Description                                   |
 |---------------------------------|-----------------------------------------------|
 | Id                              | Unique Employee Id                            |
@@ -82,7 +74,7 @@ The following three CSV tables were connected and imported into Excel
 | Body mass index                 | Division of weight by height. Also called BMI |
 | Absenteeism time in hours       | Total hours the employee was absent           |
 
-## 🔍 Key Business Questions Answered
+## 🔍 Key Business Questions Answered - In Progress
 
 1. Who are the healthy individuals with low absenteeism eligible for a health bonus program?
 2. Calculate wage increase for non-smokers. Budget is $983,221.
@@ -95,39 +87,49 @@ The following three CSV tables were connected and imported into Excel
 
 ## ➡️ Project Approach
 
-### 1. Data Cleaning and Transformation using Excel Power Query Editor and Excel Functions
-1. Imported and merged three CSV tables into a clean dataset.
-2. Removed ambiguous and low-value columns.
-3. Created BMI Category and Season columns using Index + VLOOKUP.
+### 1. Data Import
+1. Imported the raw HR dataset using Excel's **Get Data**
+2. Loaded the data into **Power Query** for transformation and modeling
 
-### 2. Creation of Helper Worksheets
+### 2. Data Modelling & Transformation in Power Query
+1. Started with a single fact table and intentionally **split it into 6 tables** to:
+  - Increase modeling complexity
+  - Improve clarity and analytical flexibility
+2. Several columns (e.g., Education, Work-Life Balance, Performance Rating) were encoded as numeric values (1–5) without definitions. Created **dimension tables** to map these numeric codes to meaningful labels  
+3. For **Performance Rating**, multiple rating columns existed:
+  - Created one shared Performance dimension
+  - Connected it to all three rating columns (1 active relationship + 2 inactive)
+4. Loaded the cleaned tables into Power Pivot and built a **star schema**
 
-The following worksheets were created for efficient selection of data based on user preferences
+### 3. Measures & Calculations in Power Pivot using DAX
+1. Created basic DAX measures such as:
+  - Overall attrition rate
+  - Attrition by department
+  - Maximum attrition across job levels
+2. Focused on clarity and correctness rather than overly complex DAX
 
-- Dashboard Metrics - The main KPIs were created and formatted on this page. The KPIs were transported to the main dashboard using the camera tool.
-- Index - Lookup helper to simplify formulas using VLOOKUP.
-- Calculation Engine - Tables needed to make dashboard graphs were created in this worksheet.
-
-### 3. Dashboard Development in Excel
-The dashboard has the following main Attributes
-1. Page 1 - Absenteeism Overview
-   - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
-   - Time-series analysis - tracks when employees take leaves
-   - Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
-   - Top reasons - table that indicates primary absent causes
-  
-2. Page 2 - Absenteeism Factors
-   - Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
-   - Social factors - Provide insights into what social factors affect absenteeism
-   - Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
+### 4. Dashboard Development in Excel
+1. Built **Pivot Tables** from the data model
+2. Created charts directly from Pivot Tables to ensure dynamic filtering
+3. Used Excel’s **Camera Tool** to design KPI cards for:
+  - Total employees
+  - Attrition %
+  - Median tenure of employees who left
+  - Highest-attrition department and job level
 
 ## 🏆 Final Insights
-- 📈 Non-Smokers are eligible for a wage increase of approx $1433.
-- 📆 March sees the highest number of absentees; Thursdays the lowest.
-- 🦾 Over 50% of employees taking leave are in the healthy BMI range.
-- 🧔 Significant absent hours come from the 31-34 age group.
-- 🦷 Medical and dental consultations make up majority of the leaves.
-- 💰 There is a slight positive correlation between compensation/hour and absent hours
-- 0️⃣ No one who had a disciplinary failure took leave
-- 🍹 Employees who drink but do not smoke had the highest absent hours.
 
+### Employee Experience Drivers
+- 👱 **Entry-level employees** experience nearly **2× higher attrition** compared to other job levels
+- 📈 Employees who left reported **lower satisfaction scores** than those who stayed
+- 🦾 Attrition is highest within the **first year**, and steadily declines with tenure
+
+### Company Structure Drivers
+- 🏗️ **R&D** shows the highest department-level attrition
+- 🏢 Employees earning **<5k salary with low experience** show the highest churn
+- 🛏️ Attrition rises significantly once commute distance exceeds **13 km**, suggesting travel fatigue as a key factor
+
+## 🪪 Key Recommendations
+- ⬆️ Strengthen **onboarding and mentorship** programs to improve first-year retention
+- 💠 Address **expectation gaps** by incorporating exit interviews and external reviews (e.g., Glassdoor)
+- 🚗 Consider **flexible work options or commute support** for employees with long travel distances
